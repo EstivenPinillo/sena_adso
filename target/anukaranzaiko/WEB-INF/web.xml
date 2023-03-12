@@ -1,0 +1,59 @@
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>Archetype Created Web Application</display-name>
+
+    <servlet>
+        <servlet-name>MiServlet</servlet-name>
+        <servlet-class>anukaranzaiko.MiServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MiServlet</servlet-name>
+        <url-pattern>/MiServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EstadoController</servlet-name>
+        <servlet-class>anukaranzaiko.controller.EstadoController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EstadoController</servlet-name>
+        <url-pattern>/EstadoController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UsuarioController</servlet-name>
+        <servlet-class>anukaranzaiko.controller.UsuarioController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/UsuarioController/editar</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/UsuarioController/editarPost</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/UsuarioController/registrar</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/UsuarioController/listar</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/UsuarioController/eliminar</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/UsuarioController/iniciarSesion</url-pattern>
+    </servlet-mapping>
+
+</web-app>

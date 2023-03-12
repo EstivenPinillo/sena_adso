@@ -1,0 +1,469 @@
+@font-face {
+  font-family: Philosopher-Regular;
+  src: url(../font/Philosopher/Philosopher-Regular.ttf);
+}
+
+@font-face {
+  font-family: ArimaMadurai-Regular;
+  src: url(../font/Arima_Madurai/ArimaMadurai-Regular.ttf);
+}
+
+@font-face {
+  font-family: Mali-Regular;
+  src: url(../font/Mali/Mali-Regular.ttf);
+}
+
+.show-data {
+  margin-top: 100px;
+  grid-column: 1/4;
+}
+
+.show-data .data-inf {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.show-data .data-inf__head {
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+}
+
+.show-data .data-inf__head__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  padding: 5px;
+  margin: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.show-data .data-inf__head__title:not(:first-child) {
+  border-width: 0px 0px 0px 1px;
+  border-color: var(--Slate-Blue);
+  border-style: solid;
+}
+
+.show-data .data-inf__body {
+  display: grid;
+  grid-auto-flow: column;
+  margin-top: 1px;
+  border-width: 1px;
+  border-color: var(--Slate-Blue);
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+.show-data .data-inf__body__data {
+  display: flex;
+  align-items: center;
+  width: 140px;
+  padding: 5px;
+  margin: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.show-data .data-inf__body__data:not(:first-child) {
+  border-width: 0px 0px 0px 1px;
+  border-color: var(--Slate-Blue);
+  border-style: solid;
+}
+
+:root {
+  font-size: 10px;
+  font-family: ArimaMadurai-Regular;
+  --Indigo: #4b0082;
+  --Lavender: #e6e6fa;
+  --Purple: #800080;
+  --Slate-Blue: #6A5ACD;
+  --Columns: 1fr 300px 1fr;
+  --Spearmint: #45B08C;
+  --Esmerald-Green: #50C878;
+  --Tiffany-Blue: #0ABAB5;
+  --Teal: #008080;
+  --Navy-Blue: #000080;
+  --Light: #ADD8E6;
+  --Cornflower-Blue: #6495ED;
+  --Midnight-Blue: #191970;
+  --Off-White: #FAF9F6;
+  --White: #ffffff;
+  --Beige: #f5f5dc;
+  --Champagne: #f7e7ce;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: var(--Columns);
+  justify-items: center;
+  font-size: 1.6rem;
+}
+
+.nav {
+  grid-column: 1/4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  color: var(--White);
+  background-color: var(--Indigo);
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu__header {
+  margin-left: 20px;
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.nav-menu-sub__options {
+  position: absolute;
+  top: 49px;
+  right: 0px;
+  width: 100%;
+  display: none;
+  box-sizing: border-box;
+  color: var(--Midnight-Blue);
+}
+
+.nav-menu-sub__options__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  margin-top: 1px;
+  border: 1px solid var(--Midnight-Blue);
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.nav-menu-sub__options__title:hover {
+  background-color: var(--Indigo);
+  color: var(--White);
+}
+
+.nav-menu__options {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 15px;
+  margin: 0px 10px 0px 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.nav-menu__options:hover {
+  background-color: var(--Purple);
+  color: var(--White);
+}
+
+.nav-menu__options:hover .nav-menu-sub__options {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-menu__options__title {
+  text-decoration: none;
+}
+
+.form {
+  display: inline;
+}
+
+.form-yup {
+  grid-column: 2/2;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding: 15px;
+  border: 1px solid;
+  border-color: var(--Slate-Blue);
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.header {
+  margin: 10px 0px 30px 0px;
+  text-align: center;
+  color: var(--Midnight-Blue);
+}
+
+.header__title {
+  display: inline-block;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: Philosopher-Regular;
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+.header__title__sub {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+  color: var(--Purple);
+}
+
+.yup {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0px 20px 0px;
+}
+
+.yup__label {
+  margin: 0px 0px 5px 0px;
+  color: var(--Navy-Blue);
+}
+
+.yup__textarea {
+  height: 80px;
+  padding: 0px;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: var(--Indigo);
+  resize: vertical;
+  font-family: ArimaMadurai-Regular;
+}
+
+.yup__textarea:focus-visible {
+  outline: none;
+}
+
+.yup__input {
+  height: 30px;
+  padding: 0px;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 0px 0px 1px 0px;
+  border-color: var(--Midnight-Blue);
+  font-family: ArimaMadurai-Regular;
+}
+
+.yup__input:focus-visible {
+  outline: none;
+}
+
+.yup__select {
+  font-family: ArimaMadurai-Regular;
+  font-size: 1.6rem;
+}
+
+.yup__select:focus-visible {
+  outline: none;
+}
+
+.yup-more--2 {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr);
+  column-gap: 10px;
+  align-items: center;
+}
+
+.yup-more--3 {
+  display: grid;
+  grid-template-columns: minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr);
+  column-gap: 10px;
+  align-items: center;
+}
+
+.yup-more--4 {
+  display: grid;
+  grid-template-columns: minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(50px, 1fr);
+  column-gap: 10px;
+  align-items: center;
+}
+
+.btn {
+  width: 200px;
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  color: var(--Midnight-Blue);
+  background-color: var(--White);
+  color: var(--Midnight-Blue);
+  font-family: ArimaMadurai-Regular;
+  cursor: pointer;
+}
+
+.btn--edit {
+  width: 128px;
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: var(--Midnight-Blue);
+  background-color: var(--White);
+  color: var(--Midnight-Blue);
+  font-family: ArimaMadurai-Regular;
+  cursor: pointer;
+}
+
+.btn--edit:hover {
+  background-color: var(--Slate-Blue);
+  color: var(--White);
+}
+
+.btn--edit:active {
+  background-color: var(--White);
+  color: var(--Midnight-Blue);
+}
+
+.btn--delete {
+  width: 128px;
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: var(--Midnight-Blue);
+  background-color: var(--White);
+  color: var(--Midnight-Blue);
+  font-family: ArimaMadurai-Regular;
+  cursor: pointer;
+}
+
+.btn--delete:hover {
+  background-color: var(--Indigo);
+  color: var(--White);
+}
+
+.btn--delete:active {
+  background-color: var(--White);
+  color: var(--Midnight-Blue);
+}
+
+.btn-yup {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.btn:hover {
+  background-color: var(--Midnight-Blue);
+  color: var(--White);
+}
+
+.btn:active {
+  background-color: var(--White);
+  color: var(--Midnight-Blue);
+}
+
+.btn:focus-visible {
+  outline: none;
+}
+
+.col-span--2 {
+  grid-column: 1/3;
+}
+
+.col-span--3 {
+  grid-column: 1/4;
+}
+
+.col-span--4 {
+  grid-column: 1/5;
+}
+
+.fz-50 {
+  font-size: 50px;
+}
+
+@media screen and (min-width: 375px) {
+  .hidden-inf {
+    display: none !important;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  :root {
+    --Columns: 1fr 340px 1fr;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  :root {
+    --Columns: 1fr 400px 1fr;
+  }
+
+  .col-span--2 {
+    grid-column: auto;
+  }
+
+  .w-400 {
+    width: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hidden-inf {
+    display: flex !important;
+  }
+
+  .nav-menu {
+    display: flex;
+  }
+
+  :root {
+    --Columns: 1fr 700px 1fr;
+  }
+
+  .col-span--3 {
+    grid-column: auto;
+  }
+
+  .col-span--4 {
+    grid-column: auto;
+  }
+}
+
+.start-col--1 {
+  grid-column-start: 1;
+}
+
+.start-col--2 {
+  grid-column-start: 2;
+}
+
+.start-col--3 {
+  grid-column-start: 3;
+}
+
+.start-col--4 {
+  grid-column-start: 4;
+}
+
+.end-col--1 {
+  grid-column-end: 1;
+}
+
+.end-col--2 {
+  grid-column-end: 2;
+}
+
+.end-col--3 {
+  grid-column-end: 3;
+}
+
+.end-col--4 {
+  grid-column-end: 4;
+}
+
+.end-col--5 {
+  grid-column-end: 5;
+}
